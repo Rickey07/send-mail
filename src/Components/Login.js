@@ -16,7 +16,7 @@ export default function Login() {
                 },
                 body:JSON.stringify({name,email,password})
             }
-            const response = await fetch('http://localhost:5000/signup',options);
+            const response = await fetch('https://send-mail-now.herokuapp.com/signup',options);
             const responseJson = await response.json();
             if (responseJson.error) {
                 alert(responseJson.error)
@@ -24,6 +24,7 @@ export default function Login() {
                 alert(responseJson.msg)
             }
         } catch(error) {
+            alert(error)
             console.log(error)
         }
     }
