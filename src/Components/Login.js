@@ -7,7 +7,6 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         const {name,email,password} = userDetails
-        console.log(JSON.stringify({name,email,password}))
         try{
             let options = {
                 method:"POST",
@@ -16,7 +15,7 @@ export default function Login() {
                 },
                 body:JSON.stringify({name,email,password})
             }
-            const response = await fetch('https://send-mail-now.herokuapp.com/signup',options);
+            const response = await fetch(`${process.env.REACT_APP_API_KEY}/signup`,options);
             const responseJson = await response.json();
             if (responseJson.error) {
                 alert(responseJson.error)
