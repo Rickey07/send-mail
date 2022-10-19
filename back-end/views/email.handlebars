@@ -1,207 +1,380 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome Email Template</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&family=Poppins&family=Roboto&display=swap");
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern HTML Email Template</title>
+<style type="text/css">
+	body {
+		margin: 0;
+		background-color: #cccccc;
+	}
+	table {
+		border-spacing: 0;
+	}
+	td {
+		padding: 0;
+	}
+	img {
+		border: 0;
+	}
 
-      *,
-      ::after,
-      ::before {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Anton", sans-serif;
-        font-family: "Montserrat", sans-serif;
-        font-family: "Poppins", sans-serif;
-        font-family: "Roboto", sans-serif;
-      }
+	.wrapper {
+		width: 100%;
+		table-layout: fixed	;
+		background-color: #cccccc;
+		padding-bottom: 60px;
+	}
 
-      body {
-        background-color: red;
-      }
+	.main {
+		background-color: #ffffff;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 600px;
+		border-spacing: 0;
+		font-family: 'sans-serif';
+		color: #171a1b;
+	}
 
-      .wrapper {
-        margin: 0 auto;
-        width: 60%;
-      }
+	.two-columns {
+		text-align: center;
+		font-size: 0;
+	}
 
-      .top-nav {
-        text-align: center;
-        background-color: #101010;
-        color: #ffffff;
-        padding: 1.1em 1.6em;
-        line-height: 1.1em;
-      }
+	.two-columns .column {
+		width: 100%;
+		max-width: 300px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+	}
 
-      .navbar {
-        display: flex;
-        background-color: #171717;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 1.1em;
-      }
+	.three-columns {
+		text-align: center;
+		font-size: 0;
+		padding: 15px 0 25px;
+	}
 
-      .navbar .logo {
-        height: 5rem;
-        width: 5rem;
-      }
+	.three-columns .column {
+		width: 100%;
+		max-width: 200px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+	}
 
-      .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 1.2rem;
-      }
+	.three-columns .padding {
+		padding: 15px;
+	}
 
-      .navbar ul li ion-icon {
-        color: #ffffff;
-        cursor: pointer;
-        font-size: 40px;
-      }
+	.three-columns .content {
+		font-size: 15px;
+		line-height: 20px;
+		padding: 0 5px;
+	}
 
-      .hero-section-1 {
-        margin-top: 1rem;
-        background: url("./instagram4.png") no-repeat center center/cover;
-        height: 450px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
-      }
+	.two-columns.last {
+		padding: 15px 0;
+	}
 
-      .background-image-container-text {
-        text-align: center;
-        color: #ffffff;
-        font-size: 1.8rem;
-      }
+	.two-columns .padding {
+		padding: 20px;
+	}
 
-      .hero-section-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 3rem;
-      }
+	.two-columns .content {
+		font-size: 15px;
+		line-height: 20px;
+		text-align: left;
+	}
 
-      .greeting-heading {
-      }
+	.button {
+		background-color: #ffffff;
+		color: #171a1b;
+		text-decoration: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		font-weight: bold;
+	}
 
-      .greeting-description {
-        margin-top: 3rem;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 80%;
-      }
+	.button-dark {
+		background-color: #171a1b;
+		color: #ffffff;
+		text-decoration: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		font-weight: bold;
+	}
 
-      .greeting-description h6 {
-        font-size: 1.5rem;
-      }
+  {{!-- # Additional Improvement css  --}}
 
-      .paragraph-description-1 {
-        margin-bottom: 2rem;
-      }
+  .logo-link {
+    text-decoration: none;
+    font-size: 12px;
+  }
 
-      .paragraph-description-2 {
-        margin-bottom: 3rem;
-      }
+  .user-name {
+    color: #094457;
+  }
 
-      .hero-section-3 img {
-        height: 25rem;
-        width: 25rem;
-        border-radius: 1rem;
-      }
+  .image-3-columns {
+    border-radius: 10%;
+  }
 
-      .products-services-feature {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-      }
-      .products-services-feature-2 {
-        text-align: center;
-        margin-top: 2rem;
-        font-size: 1.5rem;
-      }
+  .column-image-2 {
+    height: 200px;
+    width: 260px;
+    border-radius: 8%;
+  }
 
-      .products-services-feature-2 span {
-        color: #b140d6;
-        font-size: 700;
-      }
+  .link-white {
+    color: #ffffff;
+    text-decoration: none;
+  }
 
-      footer {
-        margin-top: 3rem;
-      }
 
-      .footer-feature-1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: #f7f6f5;
-        color: #101010;
-        gap: 2rem;
-      }
+</style>
+</head>
 
-      .footer-feature-1 .logo-container img {
-        height: 2rem;
-        width: 10rem;
-      }
+<body>
 
-      .footer-feature-1 .social-links-container {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-      }
 
-      .footer-feature-1 .social-links-container li ion-icon {
-        font-size: 36px;
-      }
+	<center class="wrapper">
+		<table class="main">
 
-      .footer-feature-2 {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        background-color: #072b52;
-        color: #ffffff;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem 0;
-      }
+		
+<!-- TOP BORDER -->
+			<tr>
+				<td height="8" style="background-color: #171a1b;"></td>
+			</tr>
 
-      .footer-feature-2 .terms-conditions {
-        text-align: center;
-      }
+<!-- LOGO SECTION -->
+			<tr>
+				<td style="padding: 14px 0 4px 0;">
+					<table width="100%">
 
-      .footer-feature-2 .copyrights-unsubscribe {
-        text-align: center;
-      }
+						<tr>
+							<td class="two-columns">
+								<table class="column">
+									<tr>
+										<td style="padding: 0 62px 10px">
+											<a href="https://Britacelhealthcare.com" style="color: black;" class="logo-link"><h4 style="color: black;" class="logo-link">BRITACEL HEALTHCARE</h4></a>
+										</td>
+									</tr>
+								</table>
+								<table class="column">
+									<tr>
+										<td style="padding:10px 72px ">
+												<a href="https://www.facebook.com/people/Britacel-Healthcare/100082123161483/">
+													<img src="cid:/images/black-facebook.png" alt="facebook-logo" width="30">
+												</a>
+												<a href="https://www.instagram.com/britacelhealthcare/">
+													<img src="cid:/images/black-instagram.png" alt="instagram-logo" width="30">
+												</a>
+												<a href="https://www.youtube.com/channel/UC5Yuw6Q2gHSIoD_GbTAKjOQ">
+													<img src="cid:/images/black-youtube.png" alt="twitter-logo" width="30">
+												</a>
+												<a href="#">
+													<img src="cid:/images/black-twitter.png" alt="youtube-logo" width="30">
+												</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
 
-      .footer-feature-2 a {
-        color: #ffffff;
-      }
+					</table>
+				</td>
+			</tr>
 
-      @media screen and (max-width: 768px) {
-        .wrapper {
-          width: 100%;
-        }
+<!-- BANNER IMAGE -->
+			<tr>
+				<td>
+					<a href="#"><img src="cid:/images/banner.jpg" alt="Banner" width="600" style="max-width:100%"></a>
+				</td>
+			</tr>
 
-        .hero-section-3 img {
-          width: 10rem;
-          height: 10rem;
-        }
-      }
-    </style>
-    <script
+<!-- THREE COLUMN SECTION -->
+			<tr>
+				<td>
+					<h1 style="text-align: center;">Welcome to Family <span class="user-name">{{name}}</span></h1>
+					<table width="100%">
+						<tr>
+							<td class="three-columns">
+								<table class="column">
+									<tr>
+										<td class="padding">
+
+											<table class="content">
+												<tr>
+													<td>
+														<a href="#"><img src="cid:/images/1.jpg" class="image-3-columns" alt="logo not found" width="130" style="max-width:130px"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<p style="font-weight: bold;font-size:16px">Faster Delivery</p>
+														<p>Get the faster delivery on the products without paying extra</p>
+													</td>
+												</tr>
+											</table>
+
+										</td>
+									</tr>
+								</table>
+								<table class="column">
+									<tr>
+										<td class="padding">
+
+											<table class="content">
+												<tr>
+													<td>
+														<a href="#"><img src="cid:/images/2.jpg" class="image-3-columns" alt="logo not found" width="130" style="max-width:130px"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<p style="font-weight: bold;font-size:16px">Best Products</p>
+														<p>We Provide best products in the industry at the affordable price</p>
+													</td>
+												</tr>
+											</table>
+
+										</td>
+									</tr>
+								</table>
+								<table class="column">
+									<tr>
+										<td class="padding">
+
+											<table class="content">
+												<tr>
+													<td>
+														<a href="#"><img src="cid:/images/3.jpg" class="image-3-columns" alt="logo not found" width="130" style="max-width:130px"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<p style="font-weight: bold;font-size:16px">Trusted Entity</p>
+														<p>Our Products are trusted by immense amount of members making us an trusted entity</p>
+													</td>
+												</tr>
+											</table>
+
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+
+<!-- TWO COLUMN SECTION -->
+			<tr>
+				<td style="background-color:#26292b;color:white">
+					<table width="100%">
+						<tr>
+							<td class="two-columns last">
+								<table class="column">
+									<tr>
+										<td class="padding">
+
+											<table class="content">
+												<tr>
+													<td>
+														<a href="#"><img src="cid:/images/4.jpg" class="column-image-2" alt="" width="260px" style="max-width:260px;"></a>
+													</td>
+												</tr>
+											</table>
+
+										</td>
+									</tr>
+								</table>
+
+								<table class="column">
+									<tr>
+										<td class="padding">
+
+											<table class="content">
+												<tr>
+													<td>
+														<p style="font-weight:bold;font-size:18px;">We care For You</p>
+														<p style="padding-bottom: 16px;">We care for your that's why we're always there for you at anytime</p>
+														<a href="#" class="button link-white" style="color:black;">Read More</a>
+													</td>
+												</tr>
+											</table>
+
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+<!-- TITLE, TEXT & BUTTON -->
+			<tr>
+				<td style="padding: 15px 0 50px;">
+					<table width="100%">
+						<tr>
+							<td style="text-align:center;">
+								<p style="font-size: 20px; font-weight: bold;">Keep Sharing with us by tagging #Britacel</p>
+								<p style="line-height: 23px; font-size:15px;padding: 5px 0 15px;">ThoughtFully designed, sustainably made cleaning products to protect your home and health</p>
+								<a href="#" class="button-dark link-white" style="color: white;">Read More</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+<!-- FOOTER SECTION -->
+			<tr>
+				<td style="background-color: #171a1b;">
+					<table width="100%">
+						<tr>
+							<td style="text-align: center; padding:45px 20px;color: #ffffff;">
+								<a href="#" class="link-white" style="color: white;"><h4 class="link-white" style="color: white;">Britacel healthcare</h4></a>
+								<p style="padding: 10px;">&copy;2022 All Rights Reserved to Britacel</p>
+								<p style="padding: 10px;">F-18 STREET NO.23 MIDC MAROL ANDHERI
+									ANDHERI EAST
+									MUMBAI</p>
+								<a href="https://www.facebook.com/people/Britacel-Healthcare/100082123161483/">
+									<img src="cid:/images/white-facebook.png" alt="facebook-logo" width="30">
+								</a>
+								<a href="#">
+									<img src="cid:/images/white-twitter.png" alt="instagram-logo" width="30">
+								</a>
+								<a href="https://www.youtube.com/channel/UC5Yuw6Q2gHSIoD_GbTAKjOQ">
+									<img src="cid:/images/white-youtube.png" alt="twitter-logo" width="30">
+								</a>
+								<a href="https://www.instagram.com/britacelhealthcare/">
+									<img src="cid:/images/white-instagram.png" alt="youtube-logo" width="30">
+								</a>
+								<a href="#" style="padding:10px; color:white">
+									<h4 style="padding:10px;" class="link-white" style="color: white">Unsubscribe</h4>
+								</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+	</table>
+</center>
+
+</body>
+</html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
       defer
@@ -210,86 +383,4 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
       defer
-    ></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="top-nav">Liquids|LifeStyle|Health|Cleaner</div>
-      <nav class="navbar">
-        <img src="./logo-white (1).png" alt="Logo Png" class="logo" />
-        <ul>
-          <li><ion-icon name="logo-instagram"></ion-icon></li>
-          <li><ion-icon name="logo-facebook"></ion-icon></li>
-          <li><ion-icon name="logo-twitter"></ion-icon></li>
-        </ul>
-      </nav>
-      <div class="main">
-        <div class="hero-section-1">
-          <div class="background-image-container-text">
-            We Care for you That's why we're always there for you!
-          </div>
-        </div>
-        <div class="hero-section-2">
-          <div class="greeting-heading">
-            <h1>Thank you for choosing us</h1>
-          </div>
-          <div class="greeting-description">
-            <h6>Hey There {{name}}</h6>
-            <p class="paragraph-description-1">
-              quibusdam ea repellat magnam illo quisquam quo blanditiis
-              architecto nobis unde vel voluptatem nulla voluptas
-            </p>
-            <p class="paragrap-description-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              saepe repellendus earum omnis aspernatur reprehenderit ipsa
-              perspiciatis molestiae, qui quaerat aperiam inventore? Tempore,
-              cum distinctio!
-            </p>
-          </div>
-        </div>
-        <div class="hero-section-3">
-          <div class="products-services-feature">
-            <img src="./images/1.jpg" alt="Logo Not found" />
-            <img src="./images/2.jpg" alt="Logo Not found" />
-            <img src="./images/3.jpg" alt="Logo Not found" />
-            <img src="./images/4.jpg" alt="Logo Not found" />
-            <img src="./images/6.jpg (1).jpg" alt="Logo Not found" />
-            <img src="./images/6.jpg" alt="Logo Not found" />
-          </div>
-          <div class="products-services-feature-2">
-            Keep Sharing with us by tagging <span>#Britacel_LifeStyle</span>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <div class="footer-feature-1">
-          <div class="logo-container">
-            <img src="./logo-black.png" alt="Logo.png" />
-          </div>
-          <ul class="social-links-container">
-            <li><ion-icon name="logo-instagram"></ion-icon></li>
-            <li><ion-icon name="logo-youtube"></ion-icon></li>
-            <li><ion-icon name="logo-facebook"></ion-icon></li>
-            <li><ion-icon name="logo-twitter"></ion-icon></li>
-          </ul>
-        </div>
-        <div class="footer-feature-2">
-          <div class="terms-conditions">
-            <a href="#">Terms and Conditions</a>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              illum placeat vero provident aliquid unde vitae sapiente porro
-              repellat eius.
-            </p>
-          </div>
-          <div class="copyrights-unsubscribe">
-            <h4>
-              &copy;CopyRights2022.Britacel Healthcare All Rights Reserved
-            </h4>
-            <p><a href="#">Unsubscribe</a></p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
-</html>
+></script>

@@ -1,11 +1,13 @@
 const express = require('express');
 const User = require('../models/User');
+const dotenv = require('dotenv')
+dotenv.config();
 const router = express.Router();
 const {body,validationResult} = require('express-validator');
 const nodemailer = require('nodemailer');
 const bcrypt = require('bcryptjs');
 const jsonWebToken = require('jsonwebtoken');
-const JWT_SECRET = '$$&*hahfhkj%#&6732qg';
+const JWT_SECRET = process.env.JWT_SECRET;
 const hbs = require('nodemailer-express-handlebars');
 const path = require('path');
 
@@ -54,7 +56,82 @@ router.post('/' , [body('email').isEmail(),body('name').exists(),body('password'
                 {
                     __filename:'1.jpg',
                     path:"./views/images/1.jpg",
-                    cid:'./images/1.jpg'
+                    cid:'/images/1.jpg'
+                },
+                {
+                    __filename:'2.jpg',
+                    path:"./views/images/2.jpg",
+                    cid:'/images/2.jpg'
+                },
+                {
+                    __filename:'3.jpg',
+                    path:"./views/images/3.jpg",
+                    cid:'/images/3.jpg'
+                },
+                {
+                    __filename:'4.jpg',
+                    path:"./views/images/4.jpg",
+                    cid:'/images/4.jpg'
+                },
+                {
+                    __filename:'6.jpg',
+                    path:"./views/images/6.jpg",
+                    cid:'/images/6.jpg'
+                },
+                {
+                    __filename:'5.jpg',
+                    path:"./views/images/5.jpg",
+                    cid:'/images/5.jpg'
+                },
+                {
+                    __filename:'banner.jpg',
+                    path:"./views/images/banner.jpg",
+                    cid:'/images/banner.jpg'
+                },
+                {
+                    __filename:'banner.jpg',
+                    path:"./views/images/banner.jpg",
+                    cid:'/images/banner.jpg'
+                },
+                {
+                    __filename:'black-twitter.png',
+                    path:"./views/images/black-twitter.png",
+                    cid:'/images/black-twitter.png'
+                },
+                {
+                    __filename:'black-instagram.png',
+                    path:"./views/images/black-instagram.png",
+                    cid:'/images/black-instagram.png'
+                },
+                {
+                    __filename:'black-facebook.png',
+                    path:"./views/images/black-facebook.png",
+                    cid:'/images/black-facebook.png'
+                },
+                {
+                    __filename:'black-youtube.png',
+                    path:"./views/images/black-youtube.png",
+                    cid:'/images/black-youtube.png'
+                },
+                {
+                    __filename:'white-instagram.png',
+                    path:"./views/images/white-instagram.png",
+                    cid:'/images/white-instagram.png'
+                },
+                {
+                    __filename:'white-youtube.png',
+                    path:"./views/images/white-youtube.png",
+                    cid:'/images/white-youtube.png'
+                },
+                {
+                    __filename:'white-twitter.png',
+                    path:"./views/images/white-twitter.png",
+                    cid:'/images/white-twitter.png'
+                },
+                {
+                    __filename:'white-facebook.png',
+                    path:"./views/images/white-facebook.png",
+                    cid:'/images/white-facebook.png'
                 }
             ]
         }
