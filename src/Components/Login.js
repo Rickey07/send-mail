@@ -35,7 +35,7 @@ export default function Login() {
   return (
     <>
         <Container className='d-flex justify-content-center align-items-center h-100'>
-            <Card className='w-50 p-4'>
+            <Card className='p-4'>
                 <h1 className='text-center'>SignUp</h1>
                 <Card>
                     <Form className='d-flex flex-column p-4' onSubmit={handleSubmit}>
